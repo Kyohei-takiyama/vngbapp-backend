@@ -6,6 +6,10 @@ on:
       - main
 # 将来的にpathsを指定して、アプリケーションのファイルが変更された時のみ実行するようにする
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   create_pr:
     runs-on: ubuntu-latest
