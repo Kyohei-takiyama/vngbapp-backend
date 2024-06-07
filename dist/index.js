@@ -11,5 +11,5 @@ app.get("/", (req, res) => {
     res.send("Hello World!!!!!!!!!!! modified by me!!");
 });
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Example app listening on port ${port} ${process.env.ENV}`);
 });
