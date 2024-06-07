@@ -1,0 +1,5 @@
+"development":
+  - base-branch: 'development'
+
+"main":
+  - base-branch: 'main'
