@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --env-file=.env dist/index.js",
+    "start": "node dist/index.js",
     "start:debug": "nodemon -L --inspect=0.0.0.0:9229 --env-file=.env dist/index.js",
     "build": "npx tsc",
     "build:watch": "npx tsc --watch",
-    "dev": "npm run build:watch & npm run start",
-    "dev:debug": "npm run build:watch & npm run start:debug"
+    "dev": "npm run build:watch & npm run start --env-file=.env",
+    "dev:debug": "npm run build:watch & npm run start:debug --env-file=.env"
   },
   "keywords": [],
   "author": "",
