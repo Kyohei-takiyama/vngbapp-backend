@@ -33,7 +33,7 @@ jobs:
       - name: Merge PR into development
         shell: bash
         run: |
-          gh pr merge ${{ steps.create_pr.outputs.PR_URL_DEV }} -merge || exit 0
+          gh pr merge ${{ steps.create_pr.outputs.PR_URL_DEV }} --merge || exit 0
         env:
           GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
 
@@ -52,6 +52,6 @@ jobs:
       - name: Merge PR into dependabot/target
         shell: bash
         run: |
-          gh pr merge ${{ steps.create_pr_dependabot.outputs.PR_URL_DEPENDABOT }} -merge || exit 0
+          gh pr merge ${{ steps.create_pr_dependabot.outputs.PR_URL_DEPENDABOT }} --merge || exit 0
         env:
           GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}
