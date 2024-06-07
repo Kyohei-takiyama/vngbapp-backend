@@ -8,7 +8,7 @@ const app = (0, express_1.default)();
 // ECS will run the app on port 80
 const port = 80;
 app.get("/", (req, res) => {
-    res.send("Hello World!!!!!!!!!!!");
+    res.send("Hello World!!!!!!!!!!! modified by me!!");
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
