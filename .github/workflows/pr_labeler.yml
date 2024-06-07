@@ -1,0 +1,23 @@
+name: Set labels to PR
+
+on:
+  pull_request:
+    branches:
+      - main
+      - development
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  attach_labels:
+    runs-on: ubuntu-latest
+
+    if: github.actor != 'dependabot[bot]'
+
+    steps:
+      - name: Set PR label
+        uses: actions/labeler@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
