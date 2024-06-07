@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps): update docker image to"
+    labels:
+      - "dependabot"
+    target-branch: "dependabot/target"
+
+  - package-ecosystem: "github-actions"
+    directory: ".github/workflows/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps): update github actions"
+    labels:
+      - "dependabot"
+    target-branch: "dependabot/target"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps): update dependencies"
+    labels:
+      - "dependabot"
+    target-branch: "dependabot/target"
